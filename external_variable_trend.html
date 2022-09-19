@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>External Variable Trend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- plugins -->
+    <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <!-- <link href="assets/css/theme.css" rel="stylesheet" type="text/css" /> -->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <!-- third party css -->
+    <link href="assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- third party css end -->
+
+    <link href="assets/css/updated.css" rel="stylesheet" type="text/css" />
+
+    <!-- icons -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "primary", "size": "condensed", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-end mb-0">
+
+                    <li class="dropdown d-none d-lg-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none" data-toggle="fullscreen" href="#">
+                            <i data-feather="maximize"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/defaultUser.png" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ms-1">
+                                Username <i class="uil uil-angle-down"></i> 
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
+                            <a href="index.html" class="dropdown-item notify-item">
+                                <i data-feather="log-out" class="icon-dual icon-xs me-1"></i><span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box r-rounded">
+                    <a href="dashboard.html" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="assets/images/FS-AI-Symbol.svg" alt="" height="35">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/FS-AI-k.svg" alt="" height="35">
+                        </span>
+                    </a>
+
+                    <a href="dashboard.html" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="assets/images/FS-AI-Symbol.svg" alt="" height="35">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/FS-AI-k.svg" alt="" height="35">
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile">
+                            <i data-feather="menu"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- Mobile menu toggle (Horizontal Layout)-->
+                        <a class="navbar-toggle nav-link" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu r-rounded">
+
+            <div class="h-100" data-simplebar>
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul id="side-menu">
+
+                        <li>
+                            <a href="landing.html">
+                                <i class="uil uil-home" style="font-size: small;"></i>
+                                <span> Home </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="external_variable_trend.html">
+                                <i class="uil uil-chart-line" style="font-size: small;"></i>
+                                <span> Trend of External Variables </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">Trend of External Variables</h4>                                
+                            </div>
+                        </div>
+                    </div>     
+                    <!-- end page title -->  
+
+                    <!-- Flex Tabs -->
+                    <!-- stats with icon -->
+                    <div class="row" id="data-loading">
+                        <div class="col-md-12 text-center">
+                            <div class="spinner-border text-primary m-2" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="extVarList">
+                        
+                    </div>
+                    <!-- End: Flex Tabs -->
+
+                    <!-- Load more: Button -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-primary">Show more</button>
+                        </div>
+                    </div>
+                    <!-- End: Load more: Button -->
+
+                    <!-- end row -->
+                    
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <script>document.write(new Date().getFullYear())</script> &copy; Findability Sciences Inc.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- ============================================================== -->
+    <!-- Modal Boxes -->
+    <!-- ============================================================== -->
+    <!-- History -->
+    <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true" >
+        <div class="modal-dialog" role="document" style="max-width:750px">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="">Modal Title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Data -->
+              <p>Add text/content here</p>
+              <!-- End: Data --> 
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- optional plugins -->
+    <script src="assets/libs/moment/min/moment.min.js"></script>
+
+    <!-- third party js -->
+    <script src="assets/libs/daterangepicker/daterangepicker.min.js"></script>
+    <!-- third party js ends -->
+
+    <!-- Highcharts -->
+    <script src="assets/libs/highcharts/highcharts.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/external_var_trend.js"></script>
+
+    <script>
+        $(document).ready(function(){ /*Script*/ })
+    </script>
+    
+</body>
+</html>

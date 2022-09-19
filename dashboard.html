@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- plugins -->
+    <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <!-- <link href="assets/css/theme.css" rel="stylesheet" type="text/css" /> -->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <!-- third party css -->
+    <link href="assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- third party css end -->
+
+    <link href="assets/css/updated.css" rel="stylesheet" type="text/css" />
+
+    <!-- icons -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "primary", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-end mb-0">
+
+                    <li class="dropdown d-none d-lg-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none" data-toggle="fullscreen" href="#">
+                            <i data-feather="maximize"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/defaultUser.png" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ms-1">
+                                Username <i class="uil uil-angle-down"></i> 
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
+                            <a href="index.html" class="dropdown-item notify-item">
+                                <i data-feather="log-out" class="icon-dual icon-xs me-1"></i><span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box r-rounded">
+                    <a href="dashboard.html" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="assets/images/FS-AI-Symbol.svg" alt="" height="35">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/FS-AI-k.svg" alt="" height="35">
+                        </span>
+                    </a>
+
+                    <a href="dashboard.html" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="assets/images/FS-AI-Symbol.svg" alt="" height="35">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/FS-AI-k.svg" alt="" height="35">
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile">
+                            <i data-feather="menu"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- Mobile menu toggle (Horizontal Layout)-->
+                        <a class="navbar-toggle nav-link" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu r-rounded">
+
+            <div class="h-100" data-simplebar>
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul id="side-menu">
+
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="uil uil-home" style="font-size: small;"></i>
+                                <span> Dashboards </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">Dashboard</h4>                                
+                            </div>
+                        </div>
+                    </div>     
+                    <!-- end page title -->  
+
+                    <!-- Filters -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-column flex-lg-row flex-md-row align-items-start align-items-lg-center align-items-md-center">
+                                        <div class="px-2 py-1">
+                                            <label class="col-form-label">Start / End Date</label>
+                                        </div>
+                                        <div class="px-2 py-1">
+                                            <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                                <i class="uil uil-calender"></i>&nbsp;
+                                                <span></span> <i class="fa fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="px-2 py-1">
+                                            <button id="goButton" type="button" class="btn btn-success btn-sm">Go <i class="uil-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row -->
+
+                    <!-- Bar Chart / Facebook CMO -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header card-social card-facebook py-1 px-2">
+                                    <h4>
+                                        <span class="text">Chart 01</span> <i class="uil uil-chart"></i>
+                                    </h4>                                    
+                                </div>
+                                <div class="card-body p-2 py-0">
+                                    <div class="d-flex justify-content-between mb-3 border-bottom border-primary px-2">
+                                        <div class="postTotal">
+                                            <h5 class="text-muted fs-14">Total Post</h5>
+                                            <h4>255 <!--small><span class="badge bg-success">+8</span></small--></h4>
+                                        </div>
+                                        <div class="postComment">
+                                            <h5 class="text-muted fs-14">Total Comments</h5>
+                                            <h4>895 <!--small><span class="badge bg-danger">-23</span></small--></h4>
+                                        </div>
+                                        <div class="postActive">
+                                            <h5 class="text-muted fs-14">Avg. Post Life</h5>
+                                            <h4>138 <!--small><span class="badge bg-success">+3</span></small--></h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div id="fbcmoContainer"></div>
+                                        </div>
+                                        <div class="col-lg-4 my-auto">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <table class="table card-table table-sm mb-0">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td>CM view/opinions</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">37</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Days special</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">30</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Events</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">26</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Policy announcement</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">9</span> </td>
+                                                           </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    
+                    <!-- Facebook CM -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header card-social card-facebook py-1 px-2">
+                                    <h4>
+                                        <span class="text">Chart 02</span> <i class="uil uil-chart"></i>
+                                    </h4>                                    
+                                </div>
+                                <div class="card-body p-2 py-0">
+                                    <div class="d-flex justify-content-between mb-3 border-bottom border-primary px-2">
+                                        <div class="postTotal">
+                                            <h5 class="text-muted fs-14">Total Post</h5>
+                                            <h4>142</h4>
+                                        </div>
+                                        <div class="postComment">
+                                            <h5 class="text-muted fs-14">Total Comments</h5>
+                                            <h4>473</h4>
+                                        </div>
+                                        <div class="postActive">
+                                            <h5 class="text-muted fs-14">Avg. Post Life</h5>
+                                            <h4>58</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div id="fbcmContainer"></div>
+                                        </div>
+                                        <div class="col-lg-4 my-auto">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <table class="table card-table table-sm mb-0">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td>CM view/opinions</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">37</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Days special</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">30</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Events</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">26</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Policy announcement</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">9</span> </td>
+                                                           </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        
+                    </div>
+
+                    <!-- Instagram CM -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header card-social card-facebook py-1 px-2">
+                                    <h4>
+                                        <span class="text">Chart 03</span> <i class="uil uil-chart"></i>
+                                    </h4>                                    
+                                </div>
+                                <div class="card-body p-2 py-0">
+                                    <div class="d-flex justify-content-between mb-3 border-bottom border-danger px-2">
+                                        <div class="postTotal">
+                                            <h5 class="text-muted fs-14">Total Post</h5>
+                                            <h4>103</h4>
+                                        </div>
+                                        <div class="postComment">
+                                            <h5 class="text-muted fs-14">Total Comments</h5>
+                                            <h4>475</h4>
+                                        </div>
+                                        <div class="postActive">
+                                            <h5 class="text-muted fs-14">Avg. Post Life</h5>
+                                            <h4>45</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div id="instacmContainer"></div>
+                                        </div>
+                                        <div class="col-lg-4 my-auto">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <table class="table card-table table-sm mb-0">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td>CM view/opinions</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">37</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Days special</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">30</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Events</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">26</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Policy announcement</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">9</span> </td>
+                                                           </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!-- Youtube CM -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header card-social card-facebook py-1 px-2">
+                                    <h4>
+                                        <span class="text">Chart 04</span> <i class="uil uil-chart"></i>
+                                    </h4>                                    
+                                </div>
+                                <div class="card-body p-2 py-0">
+                                    <div class="d-flex justify-content-between mb-3 border-bottom border-danger px-2">
+                                        <div class="postTotal">
+                                            <h5 class="text-muted fs-14">Total Post</h5>
+                                            <h4>46</h4>
+                                        </div>
+                                        <div class="postComment">
+                                            <h5 class="text-muted fs-14">Total Views</h5>
+                                            <h4>23875</h4>
+                                        </div>
+                                        <div class="postActive">
+                                            <h5 class="text-muted fs-14">Avg. Post Life</h5>
+                                            <h4>15</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div id="ytcmContainer"></div>
+                                        </div>
+                                        <div class="col-lg-4 my-auto">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <table class="table card-table table-sm mb-0">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td>CM view/opinions</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">37</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Days special</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">30</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Events</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">26</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td>Policy announcement</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">9</span> </td>
+                                                           </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header card-social card-facebook py-1 px-2">
+                                    <h4>
+                                        <span class="text">Chart 05</span> <i class="uil uil-chart"></i>
+                                    </h4>                                    
+                                </div>
+                                <div class="card-body p-2 py-0">
+                                    <div class="d-flex justify-content-between mb-3 border-bottom border-info px-2">
+                                        <div class="postTotal">
+                                            <h5 class="text-muted fs-14">Total Tweets</h5>
+                                            <h4>251</h4>
+                                        </div>
+                                        <div class="postComment">
+                                            <h5 class="text-muted fs-14">Reply Count</h5>
+                                            <h4>22129</h4>
+                                        </div>
+                                        <div class="postActive">
+                                            <h5 class="text-muted fs-14">Avg. Tweet Life</h5>
+                                            <h4>68</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <div id="twsmoContainer"></div>
+                                        </div>
+                                        <div class="col-lg-3 my-auto">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <table class="table card-table table-sm mb-0">
+                                                        <tbody>
+                                                           <tr>
+                                                              <td><i data-feather="activity" class="icon-dual-primary"></i> Reply Count</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">22129</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td><i data-feather="smile" class="icon-dual-success"></i> Positive Reply</td>
+                                                              <td class="text-right"> <span class="badge bg-success">7029</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td><i data-feather="meh" class="icon-dual-warning"></i> Neutral Reply</td>
+                                                              <td class="text-right"> <span class="badge bg-warning">14900</span> </td>
+                                                           </tr>
+                                                           <tr>
+                                                              <td><i data-feather="frown" class="icon-dual-danger"></i> Negative Reply</td>
+                                                              <td class="text-right"> <span class="badge bg-danger">200</span> </td>
+                                                           </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    
+            
+                    <!-- List -->
+                    
+                    <!-- end row -->
+                    
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <script>document.write(new Date().getFullYear())</script> &copy; Findability Sciences Inc.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- ============================================================== -->
+    <!-- Modal Boxes -->
+    <!-- ============================================================== -->
+    <!-- History -->
+    <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true" >
+        <div class="modal-dialog" role="document" style="max-width:750px">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="">Modal Title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Data -->
+              <p>Add text/content here</p>
+              <!-- End: Data --> 
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- optional plugins -->
+    <script src="assets/libs/moment/min/moment.min.js"></script>
+
+    <!-- third party js -->
+    <script src="assets/libs/daterangepicker/daterangepicker.min.js"></script>
+    <!-- third party js ends -->
+
+    <!-- Highcharts -->
+    <script src="assets/libs/highcharts/highcharts.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/dashboardv1.js"></script>
+
+    <script>
+        $(document).ready(function(){ /*Script*/ })
+    </script>
+    
+</body>
+</html>
