@@ -680,7 +680,7 @@ Layout Design
   border: 0;
   color: #fff;
   border-radius: 3px;
-  background-color: #ffbd3f;
+  background-color: #e49a25;
   padding: 10px 36px;
   margin-bottom: 10px;
   width: 100%;
@@ -807,3 +807,7 @@ Layout Design
 .fxt-template-layout9 .fxt-footer .text-or {
   margin-left: 3px;
 }
+
+.fxt-bg-img{background-image: url(../img/graphic4.svg); width: 600px; height: 535px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.clientLogoWrapper{display: block; background-color: #dee1eb;padding: 1px 10px 6px;margin-bottom: 10px; border-radius: 1px;}
+.company-logo{background-image: url(../img/FS-AI.svg);background-repeat: no-repeat;background-size: 90%;height: 65px;width: 265px;background-position: center bottom;display: block;margin: auto;}

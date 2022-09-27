@@ -9,6 +9,10 @@ body[data-sidebar-size=default] .left-side-menu{padding-top: 0;}
 }
 #sidebar-menu .menuitem-active .active{color: #b7c7e7;background-color: #4d6cae;}
 #sidebar-menu>ul>li>a{color: #b7c7e7;font-size: 0.9rem;font-weight: 100;}
+.header-title{text-transform: none;}
+.text-gray{color: #6c757d;}
+.sub-header{margin-bottom: 15px;}
+.logo-bg{display: flex; justify-content: center; align-content: center; margin: 6px 0px; background-color: #ffffff; padding: 3px 5px; border-radius: 2px;}
 
 /* Table Brand & History */
 .table-brand td{padding: .25rem .85rem;vertical-align: middle;font-size: 0.75rem;}
@@ -65,8 +69,19 @@ table.table-history  {border-collapse: collapse;width: 100%;margin-bottom: 1px;}
 .card-table th,.card-table td{padding: .25rem .5rem;font-size: 15px;}
 
 /* Top 10 overall */
-#top10Overall-datatable{font-size: 13px;margin-bottom: 5px;}
-.table-dark-heading { background-color: #768ccb; color: #ffffff;vertical-align: middle !important;}
+#top10Overall-datatable{font-size: 12px;margin-bottom: 5px;}
+#top10Overall-datatable th{padding: .35rem .5rem;}
+#top10Overall-datatable td{padding: 0.25rem 0rem;}
+#top10Overall-datatable td:first-child{ vertical-align: middle;}
+#top10Overall-datatable td .twoRowData{padding: 0;display: flex;flex-direction: column;}
+#top10Overall-datatable td .twoRowData .tdfirstVal{padding: 0.15rem 0.5rem 0;}
+#top10Overall-datatable td .twoRowData .tdsecVal{padding: 0.15rem 0.5rem 0;border-top: 1px solid #ddd;}
+table#top10Overall-datatable.dataTable.dtr-inline.collapsed.compact>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed.compact>tbody>tr>th.dtr-control{
+    padding: .25rem .5rem;
+    padding-left: 27px;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before{background-color: #234fa7;}
+.table-dark-heading { background-color: #768ccb; color: #ffffff;vertical-align: middle !important;font-size: 13px;}
 .table-bordered>:not(caption)>*>*{border-width: 1px 1px 0 !important;}
 table.dataTable.dtr-inline.collapsed.table-sm>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed.table-sm>tbody>tr>th:first-child:before{top:50% !important;}
 /* Card top 10 */

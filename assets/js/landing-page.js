@@ -96,7 +96,7 @@ var options2 = {
         enabled: false
     },
     series: [{
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        data: [4, 5, 4, 5, 7, 6, 9, 8, 9, 9]
     }],
     xaxis: {
         categories: ['CN-INV_ PROD_TOTAL', 'CN-INV_ INVTY_TOTAL', 'COIL_ PROD_TOTAL', 'COIL_ INVTY_TOTAL', 'FN80_ PROD_TOTAL', 'FN80_ INVTY_TOTAL', 'FN90_ PROD_TOTAL', 'FN90_ INVTY_TOTAL', 'HP_ PROD_TOTAL', 'HP_ INVTY_TOTAL'],

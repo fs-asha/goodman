@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/gmfavicon.ico">
 
     <!-- plugins -->
     <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
@@ -65,19 +65,25 @@
                 <div class="logo-box r-rounded">
                     <a href="landing.html" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="assets/images/FS-AI-Symbol.svg" alt="" height="35">
+                            <img src="assets/images/gmfavicon.png" alt="" height="35">
                         </span>
                         <span class="logo-lg">
-                            <img src="assets/images/FS-AI-k.svg" alt="" height="35">
+                            <div class="logo-bg">
+                                <img src="assets/images/gdmnlogo.png" alt="" height="35">
+                                <img src="assets/images/daikinlogo.png" alt="" height="35">
+                            </div>
                         </span>
                     </a>
 
                     <a href="landing.html" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="assets/images/FS-AI-Symbol.svg" alt="" height="35">
+                            <img src="assets/images/gmfavicon.png" alt="" height="35">
                         </span>
                         <span class="logo-lg">
-                            <img src="assets/images/FS-AI-k.svg" alt="" height="35">
+                            <div class="logo-bg">
+                                <img src="assets/images/gdmnlogo.png" alt="" height="35">
+                                <img src="assets/images/daikinlogo.png" alt="" height="35">
+                            </div>                            
                         </span>
                     </a>
                 </div>
@@ -306,205 +312,735 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body p-2">
-                                    <h4 class="header-title mt-0 mb-1">Top 10 Overall Important variables</h4>
-                                    <p class="sub-header">
-                                        For last 12 months
-                                    </p>
+                                    <div class="d-flex flex-column">
+                                        <h4 class="header-title mt-0 mb-1">Top 10 Overall Important variables <small class="text-gray">(For last 12 months)</small></h4>
+                                        <div class="d-flex mb-2">
+                                            <label for="selTarget" class="pe-1">Target</label>
+                                            <select id="selTarget" class="form-select form-select-sm" style="max-height: 30px;max-width: 110px;">
+                                                <option>FN</option>
+                                                <option>CN</option>
+                                                <option>AH</option>
+                                                <option>CL</option>
+                                                <option>HP</option>
+                                                <option>PKG</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <table id="top10Overall-datatable" class="table table-sm dt-responsive table-striped table-bordered nowrap w-100 compact">
                                         <thead class="table-dark-heading">
                                             <tr>
-                                                <th rowspan="2">Date</th>
-                                                <th colspan="6">Target</th>
-                                                <th colspan="8">External Variables</th>
+                                                <th rowspan="2" wrap>Publish Month</th>
+                                                <!-- <th colspan="6">Target</th> -->
+                                                <th colspan="10">External Variables</th>
                                             </tr>
                                             <tr>
-                                                <th>FN</th>
-                                                <th>CN</th>
-                                                <th>AH</th>
-                                                <th>CL</th>
-                                                <th>HP</th>
-                                                <th>PKG</th>
-                                                <th>AH-HOU_ PROD_TOTAL</th>
-                                                <th>AH-HOU_ INVTY_TOTAL</th>
-                                                <th>CN_ PROD_TOTAL</th>
-                                                <th>CN_ INVTY_TOTAL</th>
-                                                <th>CN-INV_ PROD_TOTAL</th>
-                                                <th>CN-INV_ INVTY_TOTAL</th>
-                                                <th>COIL_ PROD_TOTAL</th>
-                                                <th>COIL_ INVTY_TOTAL</th>
+                                                <th>Var-1</th>                                                
+                                                <th>Var-2</th>                                                
+                                                <th>Var-3</th>                                                
+                                                <th>Var-4</th>                                                
+                                                <th>Var-5</th>                                                
+                                                <th>Var-6</th>                                                
+                                                <th>Var-7</th>                                                
+                                                <th>Var-8</th>                                                
+                                                <th>Var-9</th>                                                
+                                                <th>Var-10</th>                                                
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Dec/19</td>
-                                                <td> 63,391 </td>
-                                                <td> 53,234 </td>
-                                                <td> 50,833 </td>
-                                                <td> 31,883 </td>
-                                                <td> 34,623 </td>
-                                                <td> 8,503 </td>
-                                                <td> 33,195 </td>
-                                                <td> 95,973 </td>
-                                                <td> 62,495 </td>
-                                                <td> 196,494 </td>
-                                                <td> 117 </td>
-                                                <td> 1,023 </td>
-                                                <td> 39,477 </td>
-                                                <td> 137,555 </td>
+                                                <td>Aug-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Jan/20</td>
-                                                <td> 59,529 </td>
-                                                <td> 66,918 </td>
-                                                <td> 60,707 </td>
-                                                <td> 43,457 </td>
-                                                <td> 39,822 </td>
-                                                <td> 8,978 </td>
-                                                <td> 41,667 </td>
-                                                <td> 97,432 </td>
-                                                <td> 85,435 </td>
-                                                <td> 213,463 </td>
-                                                <td> 117 </td>
-                                                <td> 1,010 </td>
-                                                <td> 55,747 </td>
-                                                <td> 150,465 </td>
+                                                <td>Jul-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Feb/20</td>
-                                                <td> 53,826 </td>
-                                                <td> 69,632 </td>
-                                                <td> 55,449 </td>
-                                                <td> 41,291 </td>
-                                                <td> 35,237 </td>
-                                                <td> 7,772 </td>
-                                                <td> 44,280 </td>
-                                                <td> 104,861 </td>
-                                                <td> 92,408 </td>
-                                                <td> 233,792 </td>
-                                                <td> 100 </td>
-                                                <td> 948 </td>
-                                                <td> 60,288 </td>
-                                                <td> 169,306 </td>
+                                                <td>Jun-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Mar/20</td>
-                                                <td> 61,194 </td>
-                                                <td> 126,169 </td>
-                                                <td> 76,416 </td>
-                                                <td> 74,499 </td>
-                                                <td> 52,661 </td>
-                                                <td> 8,987 </td>
-                                                <td> 43,290 </td>
-                                                <td> 94,746 </td>
-                                                <td> 106,773 </td>
-                                                <td> 208,416 </td>
-                                                <td> 110 </td>
-                                                <td> 859 </td>
-                                                <td> 56,430 </td>
-                                                <td> 154,842 </td>
+                                                <td>May-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Apr/20</td>
-                                                <td> 29,626 </td>
-                                                <td> 75,674 </td>
-                                                <td> 54,587 </td>
-                                                <td> 45,274 </td>
-                                                <td> 35,952 </td>
-                                                <td> 5,280 </td>
-                                                <td> 42,493 </td>
-                                                <td> 58,157 </td>
-                                                <td> 110,426 </td>
-                                                <td> 141,016 </td>
-                                                <td> 20 </td>
-                                                <td> 751 </td>
-                                                <td> 51,784 </td>
-                                                <td> 114,383 </td>
+                                                <td>Apr-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>May/20</td>
-                                                <td> 50,136 </td>
-                                                <td> 131,087 </td>
-                                                <td> 67,120 </td>
-                                                <td> 67,954 </td>
-                                                <td> 44,388 </td>
-                                                <td> 7,545 </td>
-                                                <td> 41,696 </td>
-                                                <td> 49,918 </td>
-                                                <td> 114,078 </td>
-                                                <td> 116,629 </td>
-                                                <td> 187 </td>
-                                                <td> 721 </td>
-                                                <td> 47,138 </td>
-                                                <td> 92,105 </td>
+                                                <td>Mar-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Jun/20</td>
-                                                <td> 55,928 </td>
-                                                <td> 135,205 </td>
-                                                <td> 72,624 </td>
-                                                <td> 84,466 </td>
-                                                <td> 45,631 </td>
-                                                <td> 10,492 </td>
-                                                <td> 38,769 </td>
-                                                <td> 36,436 </td>
-                                                <td> 118,583 </td>
-                                                <td> 87,114 </td>
-                                                <td> 148 </td>
-                                                <td> 641 </td>
-                                                <td> 71,627 </td>
-                                                <td> 75,579 </td>
+                                                <td>Feb-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Jul/20</td>
-                                                <td> 45,228 </td>
-                                                <td> 109,996 </td>
-                                                <td> 58,913 </td>
-                                                <td> 64,805 </td>
-                                                <td> 41,140 </td>
-                                                <td> 9,129 </td>
-                                                <td> 36,469 </td>
-                                                <td> 34,237 </td>
-                                                <td> 114,603 </td>
-                                                <td> 82,410 </td>
-                                                <td> 192 </td>
-                                                <td> 604 </td>
-                                                <td> 50,443 </td>
-                                                <td> 59,913 </td>
+                                                <td>Jan-22</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Aug/20</td>
-                                                <td> 48,807 </td>
-                                                <td> 94,456 </td>
-                                                <td> 55,633 </td>
-                                                <td> 47,338 </td>
-                                                <td> 38,961 </td>
-                                                <td> 8,734 </td>
-                                                <td> 37,591 </td>
-                                                <td> 34,856 </td>
-                                                <td> 93,735 </td>
-                                                <td> 74,416 </td>
-                                                <td> 242 </td>
-                                                <td> 615 </td>
-                                                <td> 44,352 </td>
-                                                <td> 54,664 </td>
+                                                <td>Dec-21</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Sep/20</td>
-                                                <td> 55,980 </td>
-                                                <td> 84,639 </td>
-                                                <td> 54,825 </td>
-                                                <td> 42,688 </td>
-                                                <td> 36,866 </td>
-                                                <td> 9,079 </td>
-                                                <td> 37,646 </td>
-                                                <td> 35,493 </td>
-                                                <td> 98,549 </td>
-                                                <td> 83,982 </td>
-                                                <td> 242 </td>
-                                                <td> 710 </td>
-                                                <td> 44,218 </td>
-                                                <td> 56,063 </td>
+                                                <td>Nov-21</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
                                             </tr>
+                                            <tr>
+                                                <td>Oct-21</td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.3171</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">AH-HOU_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.0593</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.06792</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">-0.22305</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.16573</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">CN-INV_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.13683</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.25813</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">COIL_ INVTY_TOTAL</div>
+                                                        <div class="tdsecVal">0.00092</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN80_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">-0.08413</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="twoRowData">
+                                                        <div class="tdfirstVal">FN90_ PROD_TOTAL</div>
+                                                        <div class="tdsecVal">0.45966</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -526,7 +1062,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title mt-0 mb-1">Important variables for Last 6 months</h4>
+                                    <h4 class="header-title mt-0 mb-1">Max number of Appearance</h4>
                                     <div id="apex-bar-1" class="apex-charts"></div>
                                 </div>
                             </div>
@@ -822,6 +1358,7 @@
                         "next": "<i class='uil uil-angle-right'>"
                     }
                 },
+                "aaSorting": [],
                 "pageLength": 10,
                 "drawCallback": function () {
                     $('.dataTables_paginate > .pagination').addClass('pagination-rounded');
