@@ -77,9 +77,7 @@ table.table-history  {border-collapse: collapse;width: 100%;margin-bottom: 1px;}
 #top10Overall-datatable td .twoRowData .tdfirstVal{padding: 0.15rem 0.5rem 0;}
 #top10Overall-datatable td .twoRowData .tdsecVal{padding: 0.15rem 0.5rem 0;border-top: 1px solid #ddd;}
 table#top10Overall-datatable.dataTable.dtr-inline.collapsed.compact>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed.compact>tbody>tr>th.dtr-control{
-    padding: .25rem .5rem;
-    padding-left: 27px;
-}
+    padding: .25rem .5rem; padding-left: 27px;}
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before{background-color: #234fa7;}
 .table-dark-heading { background-color: #768ccb; color: #ffffff;vertical-align: middle !important;font-size: 13px;}
 .table-bordered>:not(caption)>*>*{border-width: 1px 1px 0 !important;}
